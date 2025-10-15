@@ -75,15 +75,6 @@ class GifToFramesConverter {
             });
         }
 
-        // 格式选择事件
-        const formatOptions = document.querySelectorAll('input[name="format"]');
-        formatOptions.forEach(option => {
-            option.addEventListener('change', (e) => {
-                console.log('Format changed to:', e.target.value);
-            });
-        });
-    }
-
     triggerFileInput() {
         try {
             console.log('Triggering file input');
@@ -281,9 +272,8 @@ class GifToFramesConverter {
 
             console.log(`Extracted ${frames.length} frames from ${file.name}`);
 
-            // 获取选择的格式
-            const formatElement = document.querySelector('input[name="format"]:checked');
-            const format = formatElement ? formatElement.value : 'png';
+            // 使用默认PNG格式
+            const format = 'png';
 
             // 转换帧格式
             const processedFrames = await this.convertFramesToFormat(frames, format);
