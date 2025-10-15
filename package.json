@@ -1,0 +1,29 @@
+{
+  "name": "gif-to-frames",
+  "version": "1.0.0",
+  "description": "Convert GIF files to individual PNG, JPG, and WEBP frames",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "build": "echo 'Build complete'",
+    "dev": "live-server --port=3000 --open=index.html"
+  },
+  "keywords": [
+    "gif",
+    "frames",
+    "converter",
+    "png",
+    "jpg",
+    "webp",
+    "image",
+    "animation"
+  ],
+  "author": "GIFtoFrames Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "gif.js": "^0.2.0"
+  }
+}

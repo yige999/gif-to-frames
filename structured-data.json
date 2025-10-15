@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GIFtoFrames",
+  "description": "Convert GIF animations to individual PNG, JPG, and WEBP frames. Free online tool with no software required.",
+  "url": "https://giftoframes.site",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Web Browser",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Convert GIF to PNG frames",
+    "Convert GIF to JPG frames",
+    "Convert GIF to WEBP frames",
+    "Batch processing",
+    "Drag and drop interface",
+    "Mobile responsive design",
+    "No file uploads required",
+    "High quality output"
+  ],
+  "screenshot": "https://giftoframes.site/screenshot.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "GIFtoFrames Team"
+  },
+  "datePublished": "2024-10-15",
+  "dateModified": "2024-10-15",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "isFamilyFriendly": true
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easily convert your GIFs into individual PNG, JPG, and WEBP frames with our powerful online tool. No software required!">
+    <meta name="keywords" content="gif to frames, split gif into frames, gif to png frames, gif to frames converter, convert gif to frames online">
+    <meta name="author" content="GIFtoFrames">
+    <title>Convert GIF to PNG Frames | GIFtoFrames</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Convert GIF to PNG Frames | GIFtoFrames">
+    <meta property="og:description" content="Easily convert your GIFs into individual PNG, JPG, and WEBP frames with our powerful online tool. No software required!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://giftoframes.site">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GIFtoFrames",
+      "description": "Convert GIF animations to individual PNG, JPG, and WEBP frames. Free online tool with no software required.",
+      "url": "https://giftoframes.site",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Convert GIF to PNG frames",
+        "Convert GIF to JPG frames",
+        "Convert GIF to WEBP frames",
+        "Batch processing",
+        "Drag and drop interface",
+        "Mobile responsive design",
+        "No file uploads required",
+        "High quality output"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "GIFtoFrames Team"
+      },
+      "datePublished": "2024-10-15",
+      "dateModified": "2024-10-15",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "isFamilyFriendly": true
+    }
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>GIFtoFrames</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Convert GIF to Frames Instantly</h1>
+                <p class="hero-subtitle">Transform your GIF animations into individual PNG, JPG, or WEBP frames. No software required, completely free!</p>
+
+                <!-- Main Upload Area -->
+                <div class="upload-container">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📁</div>
+                        <h3>Drop your GIF files here</h3>
+                        <p>or click to browse</p>
+                        <input type="file" id="fileInput" accept=".gif" multiple hidden>
+                        <button class="browse-btn" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+                    </div>
+
+                    <!-- Format Selection -->
+                    <div class="format-selection">
+                        <label class="format-label">Output Format:</label>
+                        <div class="format-options">
+                            <label class="format-option">
+                                <input type="radio" name="format" value="png" checked>
+                                <span>PNG</span>
+                            </label>
+                            <label class="format-option">
+                                <input type="radio" name="format" value="jpg">
+                                <span>JPG</span>
+                            </label>
+                            <label class="format-option">
+                                <input type="radio" name="format" value="webp">
+                                <span>WEBP</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processing Section -->
+        <section class="processing-section" id="processingSection" style="display: none;">
+            <div class="processing-header">
+                <h2>Processing Your GIFs</h2>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span class="progress-text" id="progressText">0%</span>
+                </div>
+            </div>
+
+            <!-- Files Being Processed -->
+            <div class="processing-files" id="processingFiles"></div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2>Your Extracted Frames</h2>
+                <div class="results-actions">
+                    <button class="download-all-btn" id="downloadAllBtn">Download All Frames</button>
+                    <button class="clear-btn" id="clearBtn">Clear All</button>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2>Why Choose GIFtoFrames?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Process your GIFs in seconds with our optimized conversion engine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Multiple Formats</h3>
+                        <p>Export frames as PNG, JPG, or WEBP to suit your needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Works perfectly on all devices - desktop, tablet, and mobile.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure & Private</h3>
+                        <p>All processing happens in your browser. Your files never leave your device.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Batch Processing</h3>
+                        <p>Upload and convert multiple GIF files at once.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>High Quality</h3>
+                        <p>Maintain original image quality with no compression artifacts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload GIF</h3>
+                        <p>Drag and drop or browse to select your GIF files. You can upload multiple files at once.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Choose Format</h3>
+                        <p>Select your desired output format - PNG for transparency, JPG for smaller size, or WEBP for modern web.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Download Frames</h3>
+                        <p>Preview and download individual frames or get all frames as a ZIP file.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>What formats can I convert my GIF to?</h3>
+                        <p>You can convert GIF frames to PNG (with transparency support), JPG (smaller file size), or WEBP (modern web format).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is there a file size limit?</h3>
+                        <p>There's no strict file size limit, but larger files may take longer to process. For best performance, we recommend GIF files under 50MB.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is this tool free to use?</h3>
+                        <p>Yes! GIFtoFrames is completely free to use with no watermarks or limitations.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Are my files secure?</h3>
+                        <p>Absolutely! All processing happens directly in your browser using JavaScript. Your files never leave your device or get uploaded to any server.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I use this on mobile devices?</h3>
+                        <p>Yes! GIFtoFrames is fully responsive and works great on smartphones and tablets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>GIFtoFrames</h3>
+                    <p>The simplest way to convert GIF to frames</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How it Works</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GIFtoFrames. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
