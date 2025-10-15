@@ -3,6 +3,7 @@ class GifToFramesConverter {
         // 检查所有必需的元素是否存在
         this.uploadArea = document.getElementById('uploadArea');
         this.fileInput = document.getElementById('fileInput');
+        this.mobileFileInput = document.getElementById('mobileFileInput');
         this.processingSection = document.getElementById('processingSection');
         this.resultsSection = document.getElementById('resultsSection');
         this.processingFiles = document.getElementById('processingFiles');
@@ -38,6 +39,14 @@ class GifToFramesConverter {
         if (this.fileInput) {
             this.fileInput.addEventListener('change', (e) => {
                 console.log('File input change event triggered');
+                this.handleFileSelect(e);
+            });
+        }
+
+        // 移动端备选文件输入事件
+        if (this.mobileFileInput) {
+            this.mobileFileInput.addEventListener('change', (e) => {
+                console.log('Mobile file input change event triggered');
                 this.handleFileSelect(e);
             });
         }
@@ -592,6 +601,9 @@ class GifToFramesConverter {
         }
         if (this.fileInput) {
             this.fileInput.value = '';
+        }
+        if (this.mobileFileInput) {
+            this.mobileFileInput.value = '';
         }
         this.updateProgress(0);
     }
