@@ -633,6 +633,144 @@ body {
     color: #718096;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    .upload-area {
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .browse-btn {
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        min-height: 48px;
+        touch-action: manipulation;
+    }
+
+    .format-option {
+        padding: 12px 20px;
+        min-height: 48px;
+        touch-action: manipulation;
+    }
+
+    .frame-download-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        min-height: 40px;
+        touch-action: manipulation;
+    }
+
+    .download-all-btn,
+    .clear-btn {
+        padding: 12px 24px;
+        min-height: 48px;
+        touch-action: manipulation;
+    }
+
+    /* Prevent zoom on input focus */
+    input[type="radio"] {
+        transform: scale(1.5);
+        margin: 0 8px;
+    }
+
+    /* Better scrolling on mobile */
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+
+    .main {
+        margin-top: 60px;
+    }
+
+    .header {
+        padding: 0.75rem 0;
+    }
+
+    .nav-brand h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Mobile-specific notifications */
+    .notification {
+        top: 10px !important;
+        right: 10px !important;
+        left: 10px !important;
+        max-width: none !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Better drag and drop feedback on mobile */
+.upload-area.dragover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        border-color: #667eea;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    }
+    50% {
+        border-color: #764ba2;
+        background: linear-gradient(135deg, rgba(118, 75, 162, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+    }
+}
+
+/* Better frame grid on very small screens */
+@media (max-width: 480px) {
+    .frames-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .frame-item img {
+        height: 100px;
+    }
+
+    .frame-info {
+        padding: 0.5rem;
+    }
+
+    .frame-number {
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Better button states for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .browse-btn:active,
+    .frame-download-btn:active,
+    .download-all-btn:active,
+    .clear-btn:active {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+}
+
+/* Loading states for mobile */
+.processing-file.processing::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 10px;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
