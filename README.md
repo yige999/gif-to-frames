@@ -85,11 +85,22 @@ This project can be deployed to any static hosting service:
 ## SEO Optimization
 
 The website is optimized for the following keywords:
-- "gif to frames"
-- "split gif into frames"
-- "gif to png frames"
-- "gif to frames converter"
-- "convert gif to frames online"
+- "Convert GIF to PNG"
+- "GIF to JPG"
+- "GIF to WEBP"
+- "GIF frame extraction"
+- "Online GIF converter"
+- "Batch GIF processing"
+- "High quality image conversion"
+- "Free GIF conversion tool"
+- "split GIF into frames"
+- "extract GIF frames"
+- "GIF to image converter"
+- "animated GIF converter"
+- "GIF frames downloader"
+- "multiple GIF converter"
+- "professional GIF tool"
+- "web-based GIF processor"
 
 ## Performance
 
