@@ -93,14 +93,6 @@ The website is optimized for the following keywords:
 - "Batch GIF processing"
 - "High quality image conversion"
 - "Free GIF conversion tool"
-- "split GIF into frames"
-- "extract GIF frames"
-- "GIF to image converter"
-- "animated GIF converter"
-- "GIF frames downloader"
-- "multiple GIF converter"
-- "professional GIF tool"
-- "web-based GIF processor"
 
 ## Performance
 

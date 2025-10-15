@@ -3,7 +3,6 @@ class GifToFramesConverter {
         // 检查所有必需的元素是否存在
         this.uploadArea = document.getElementById('uploadArea');
         this.fileInput = document.getElementById('fileInput');
-        this.mobileFileInput = document.getElementById('mobileFileInput');
         this.processingSection = document.getElementById('processingSection');
         this.resultsSection = document.getElementById('resultsSection');
         this.processingFiles = document.getElementById('processingFiles');
@@ -14,6 +13,10 @@ class GifToFramesConverter {
         this.clearBtn = document.getElementById('clearBtn');
 
         // 检查必需元素
+        console.log('Checking required elements:');
+        console.log('uploadArea:', this.uploadArea);
+        console.log('fileInput:', this.fileInput);
+
         if (!this.uploadArea || !this.fileInput) {
             console.error('Required elements not found');
             this.showErrorMessage('页面加载不完整，请刷新页面重试');
@@ -43,14 +46,7 @@ class GifToFramesConverter {
             });
         }
 
-        // 移动端备选文件输入事件
-        if (this.mobileFileInput) {
-            this.mobileFileInput.addEventListener('change', (e) => {
-                console.log('Mobile file input change event triggered');
-                this.handleFileSelect(e);
-            });
-        }
-
+        
         // 上传区域点击事件
         if (this.uploadArea) {
             this.uploadArea.addEventListener('click', (e) => {
@@ -601,9 +597,6 @@ class GifToFramesConverter {
         }
         if (this.fileInput) {
             this.fileInput.value = '';
-        }
-        if (this.mobileFileInput) {
-            this.mobileFileInput.value = '';
         }
         this.updateProgress(0);
     }
